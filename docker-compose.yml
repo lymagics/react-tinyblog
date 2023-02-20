@@ -1,0 +1,27 @@
+version: '3'
+services:
+  frontend:
+    build: .
+    image: react-tinyblog
+    ports:
+      - '8080:80'
+    restart: always
+  api:
+    build: 
+      context: ../tinyblog-api
+      dockerfile: ../tinyblog-api/compose/production/Dockerfile
+    command: gunicorn config.wsgi:application --bind 0.0.0.0:8000
+    image: tinyblog-api
+    env_file: .env.api
+    depends_on:
+      - db
+    restart: always
+  db:
+    image: postgres
+    env_file: .env.db
+    volumes:
+      - tinyblog-data:/var/lib/postgresql/data/
+    restart: always
+
+volumes:
+  tinyblog-data:

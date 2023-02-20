@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.App {
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Header {
+  border-bottom: 1px solid #ddd;
+}
+
+.Body {
+  margin-top: 10px;
+}
+
+.Post {
+  margin-top: 10px;
+}
+
+.Post:hover {
+  background: #eee;
+}
+
+.Post a {
+  text-decoration: none;
+}
+
+.Content {
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.InputField {
+  margin-bottom: 10px;
+}
+
+.Write {
+  width: 100%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.More {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: right;
 }
